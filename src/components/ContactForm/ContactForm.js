@@ -79,12 +79,15 @@ const Input = styled.input`
   background: #ffffff;
   border-radius: 5px;
   line-height: 25px;
-  height: 35px;
+  height: 25px;
   width: 300px;
   padding: 0 10px;
-  outline: none;
   border: 1px solid #cacaca;
   margin-bottom: 10px;
+
+  &:hover & {
+    border: 2px solid #blue;
+  }
 `;
 
 const Label = styled.label`
