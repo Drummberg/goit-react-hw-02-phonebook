@@ -32,34 +32,30 @@ export class ContactForm extends React.Component {
 
     return (
       <Form onSubmit={this.handleSubmit}>
-        <Label>
-          Name
-          <Input
-            type="text"
-            name="name"
-            value={name}
-            placeholder="Enter name"
-            onChange={this.handleChange}
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required
-          />
-        </Label>
+        <Label htmlFor={this.nameId}>Name</Label>
+        <Input
+          type="text"
+          name="name"
+          value={name}
+          placeholder="Enter name"
+          onChange={this.handleChange}
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          required
+        />
 
-        <Label>
-          Number
-          <Input
-            type="tel"
-            name="number"
-            value={number}
-            country={'ua'}
-            regions={'europe'}
-            onChange={this.handleChange}
-            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-            required
-          />
-        </Label>
+        <Label htmlFor={this.numberId}>Number</Label>
+        <Input
+          type="tel"
+          name="number"
+          value={number}
+          country={'ua'}
+          regions={'europe'}
+          onChange={this.handleChange}
+          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          required
+        />
 
         <Button type="submit">Add contact</Button>
       </Form>
@@ -80,23 +76,27 @@ const Input = styled.input`
   border-radius: 5px;
   line-height: 25px;
   height: 25px;
-  width: 300px;
+  width: 250px;
   padding: 0 10px;
   border: 1px solid #cacaca;
-  margin-bottom: 10px;
-
-  &:hover & {
-    border: 2px solid #blue;
+  margin-bottom: 20px;
+  &:active {
+      border: rgb((76, 119, 213);
   }
 `;
 
 const Label = styled.label`
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 20px;
 `;
 
 const Button = styled.button`
   cursor: pointer;
   border-radius: 5px;
+  &:active {
+    background-color: rgb(75, 75, 193);
+  }
 `;
