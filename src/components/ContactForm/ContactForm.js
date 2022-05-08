@@ -81,7 +81,7 @@ const Input = styled.input`
   border: 1px solid #cacaca;
   margin-bottom: 20px;
   &:active {
-      border: rgb((76, 119, 213);
+    box-shadow: rgb(155, 25, 233);
   }
 `;
 
