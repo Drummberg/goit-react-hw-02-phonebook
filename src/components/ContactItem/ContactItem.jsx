@@ -3,7 +3,7 @@ import { ItemLi, Button } from './ContactItem.styled';
 
 export const ContactItem = ({ id, name, number, onClick }) => {
   return (
-    <ItemLi key={id}>
+    <ItemLi>
       <p>
         {name}: {number}
       </p>
